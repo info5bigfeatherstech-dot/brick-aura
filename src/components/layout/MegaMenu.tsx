@@ -27,7 +27,7 @@ export function MegaMenu() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          'inline-flex items-center gap-1 text-sm font-medium transition-colors py-2 focus:outline-none',
+          'inline-flex items-center gap-1 text-xs xl:text-sm font-medium transition-colors py-1 focus:outline-none whitespace-nowrap shrink-0',
           isOpen ? 'text-brick' : 'text-ink hover:text-brick'
         )}
         aria-expanded={isOpen}
@@ -35,7 +35,7 @@ export function MegaMenu() {
         <span>All Residential</span>
         <ChevronDown
           className={cn(
-            'w-3.5 h-3.5 transition-transform duration-200',
+            'w-3.5 h-3.5 transition-transform duration-200 shrink-0',
             isOpen && 'rotate-180 text-brick'
           )}
         />

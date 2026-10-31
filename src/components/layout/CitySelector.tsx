@@ -30,7 +30,7 @@ export function CitySelector({ className }: CitySelectorProps) {
       <PopoverTrigger asChild>
         <button
           className={cn(
-            'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border border-sand bg-white hover:border-brick hover:bg-cream text-sm font-medium text-ink transition-colors focus:outline-none focus:ring-1 focus:ring-brick',
+            'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border border-sand bg-white hover:border-brick hover:bg-cream text-xs xl:text-sm font-medium text-ink transition-colors focus:outline-none focus:ring-1 focus:ring-brick whitespace-nowrap shrink-0',
             className
           )}
           aria-expanded={open}

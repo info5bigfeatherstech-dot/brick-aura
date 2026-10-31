@@ -33,7 +33,7 @@ export function BrandLogo({ className, variant = 'light', size = 'md' }: BrandLo
     <Link
       href="/"
       className={cn(
-        'group inline-flex items-center gap-2.5 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brick rounded-sm',
+        'group inline-flex items-center gap-2.5 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brick rounded-sm shrink-0',
         className
       )}
       aria-label="BrickAura Properties - Home"

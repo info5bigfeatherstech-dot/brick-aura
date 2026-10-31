@@ -35,18 +35,18 @@ export function MainNav() {
     <header
       className={cn(
         'sticky top-0 z-40 w-full bg-white transition-all duration-200 border-b border-sand',
-        isScrolled ? 'shadow-sm py-2 sm:py-2.5' : 'py-3 sm:py-3.5'
+        isScrolled ? 'shadow-sm py-2' : 'py-2.5 sm:py-3'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-2 lg:gap-4 xl:gap-8 h-10">
           {/* Left: Brand Logo + Desktop Nav Links */}
-          <div className="flex items-center gap-8">
-            <BrandLogo size="md" />
+          <div className="flex items-center gap-3.5 xl:gap-6 min-w-0">
+            <BrandLogo size="md" className="shrink-0" />
 
             <nav
               aria-label="Desktop Main Navigation"
-              className="hidden lg:flex items-center gap-6"
+              className="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-6"
             >
               {MAIN_NAV_LINKS.map((link) => {
                 const isActive = pathname === link.href;
@@ -55,13 +55,13 @@ export function MainNav() {
                     key={link.label}
                     href={link.href}
                     className={cn(
-                      'relative text-sm font-medium transition-colors py-1 hover:text-brick',
+                      'whitespace-nowrap inline-flex items-center gap-1.5 text-xs xl:text-sm font-medium transition-colors py-1 hover:text-brick shrink-0',
                       isActive ? 'text-brick font-semibold' : 'text-ink'
                     )}
                   >
                     <span>{link.label}</span>
                     {link.badge && (
-                      <span className="ml-1.5 inline-block text-[9px] uppercase tracking-wider font-bold bg-brick text-white px-1.5 py-0.2 rounded-xs">
+                      <span className="inline-flex items-center text-[9px] uppercase tracking-wider font-bold bg-brick text-white px-1.5 py-0.5 rounded-xs leading-none shrink-0 shadow-2xs">
                         {link.badge}
                       </span>
                     )}
@@ -75,16 +75,16 @@ export function MainNav() {
           </div>
 
           {/* Right Desktop: City Selector + Wishlist + Post Property FREE */}
-          <div className="hidden lg:flex items-center gap-4">
-            <CitySelector />
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+            <CitySelector className="h-9 px-2.5 xl:px-3 text-xs xl:text-sm" />
 
             {/* Wishlist Trigger */}
             <button
               onClick={() => setWishlistSheetOpen(true)}
-              className="relative p-2 rounded-sm text-ink hover:text-brick hover:bg-cream border border-transparent hover:border-sand transition-all focus:outline-none focus:ring-1 focus:ring-brick"
+              className="relative h-9 w-9 flex items-center justify-center rounded-sm text-ink hover:text-brick hover:bg-cream border border-sand transition-all focus:outline-none focus:ring-1 focus:ring-brick shrink-0"
               aria-label={`View shortlisted properties (${wishlistCount})`}
             >
-              <Heart className="w-5 h-5 stroke-[1.8]" />
+              <Heart className="w-4 h-4 xl:w-4.5 xl:h-4.5 stroke-[1.8]" />
               {wishlistCount > 0 && (
                 <span className="absolute -top-1 -right-1 flex h-4 min-w-[16px] px-1 items-center justify-center rounded-full bg-brick text-[10px] font-bold text-white shadow-xs">
                   {wishlistCount}
@@ -93,10 +93,14 @@ export function MainNav() {
             </button>
 
             {/* Post Property Primary CTA */}
-            <Link href="/post-property">
-              <Button variant="default" size="default" className="gap-2 font-semibold shadow-xs">
+            <Link href="/post-property" className="shrink-0">
+              <Button
+                variant="default"
+                size="default"
+                className="h-9 px-3 xl:px-4 gap-1.5 font-semibold shadow-xs text-xs xl:text-sm whitespace-nowrap"
+              >
                 <span>Post Property</span>
-                <span className="text-[10px] font-bold bg-white text-brick px-1.5 py-0.5 rounded-xs tracking-wide">
+                <span className="text-[9px] font-bold bg-white text-brick px-1.5 py-0.5 rounded-xs tracking-wider uppercase leading-none">
                   FREE
                 </span>
               </Button>
@@ -109,7 +113,7 @@ export function MainNav() {
 
             <Link
               href="/search"
-              className="p-2 rounded-sm text-ink hover:text-brick transition-colors"
+              className="p-1.5 rounded-sm text-ink hover:text-brick transition-colors"
               aria-label="Search properties"
             >
               <Search className="w-5 h-5" />
@@ -117,7 +121,7 @@ export function MainNav() {
 
             <button
               onClick={() => setWishlistSheetOpen(true)}
-              className="relative p-2 rounded-sm text-ink hover:text-brick transition-colors"
+              className="relative p-1.5 rounded-sm text-ink hover:text-brick transition-colors"
               aria-label="Wishlist"
             >
               <Heart className="w-5 h-5" />
@@ -130,7 +134,7 @@ export function MainNav() {
 
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 rounded-sm text-ink hover:text-brick transition-colors"
+              className="p-1.5 rounded-sm text-ink hover:text-brick transition-colors"
               aria-label="Open navigation menu"
             >
               <Menu className="w-6 h-6" />
@@ -141,4 +145,3 @@ export function MainNav() {
     </header>
   );
 }
-
