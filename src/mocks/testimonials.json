@@ -1,0 +1,69 @@
+[
+  {
+    "id": "test-1",
+    "authorName": "Vikram & Ananya Malhotra",
+    "authorRole": "Fintech Executives",
+    "city": "Gurugram",
+    "dealType": "Bought in Gurgaon",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+    "quote": "Finding a 4BHK with unobstructed green views in Sector 76 seemed impossible until BrickAura matched us with DLF Privana. The RERA verification on the platform gave us 100% confidence to proceed with the booking.",
+    "rating": 5,
+    "propertyTitle": "DLF Privana South (4 BHK)"
+  },
+  {
+    "id": "test-2",
+    "authorName": "Dr. Sameer Kulkarni",
+    "authorRole": "Orthopedic Surgeon",
+    "city": "Pune",
+    "dealType": "Bought in Pune",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+    "quote": "BrickAura's map search is miles ahead of cluttered legacy portals. I could see exact price per sq.ft benchmarks across Baner before scheduling visits. Zero brokerage and direct builder coordination saved us weeks.",
+    "rating": 5,
+    "propertyTitle": "VTP Earth One, Baner"
+  },
+  {
+    "id": "test-3",
+    "authorName": "Rohit & Priya Sen",
+    "authorRole": "Engineering Leaders, Amazon",
+    "city": "Bengaluru",
+    "dealType": "Bought in Whitefield",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
+    "quote": "The financial clarity on BrickAura is unmatched. The EMI and affordability simulator factored in our existing obligations accurately, helping us stretch for the 3BHK corner unit at Prestige Park Grove.",
+    "rating": 5,
+    "propertyTitle": "Prestige Park Grove (3 BHK)"
+  },
+  {
+    "id": "test-4",
+    "authorName": "Sunita Singhania",
+    "authorRole": "Independent Interior Designer",
+    "city": "Mumbai",
+    "dealType": "Sold in Mumbai",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80",
+    "quote": "Posted our ancestral sea-facing apartment in Worli via BrickAura's free 3-step owner flow. Received verified inquiries from serious HNI buyers within 48 hours without constant cold calls from unverified brokers.",
+    "rating": 5,
+    "propertyTitle": "Sea-Facing Penthouse, Worli"
+  },
+  {
+    "id": "test-5",
+    "authorName": "Tanmay Bhattacharya",
+    "authorRole": "Product Designer",
+    "city": "Bengaluru",
+    "dealType": "Rented in Indiranagar",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80",
+    "quote": "Finding a pet-friendly apartment with a private terrace in Indiranagar was a nightmare on other apps. BrickAura's curated lifestyle filters made the shortlist effortless. Handover was seamless.",
+    "rating": 5,
+    "propertyTitle": "Indiranagar 100ft Terrace Home"
+  },
+  {
+    "id": "test-6",
+    "authorName": "Neha & Rajesh Mehta",
+    "authorRole": "Chartered Accountants",
+    "city": "Noida",
+    "dealType": "Bought in Noida",
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80",
+    "quote": "We loved the transparent historical price trends for Sector 150. Being able to compare 5 projects side-by-side with verified RERA registration certificates gave our family complete peace of mind.",
+    "rating": 5,
+    "propertyTitle": "Sector 150 Luxury Flat"
+  }
+]
+

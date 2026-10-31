@@ -2,26 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FFFFFF;
+    --foreground: #1F2326;
+    --brick: #A8432A;
+    --brick-hover: #8E3620;
+    --brick-light: #FDF3F0;
+    --ink: #1F2326;
+    --ink-soft: #383D41;
+    --muted-text: #6B6560;
+    --cream: #FAF4EC;
+    --cream-dark: #F3E7D9;
+    --sand: #E9D8C4;
+    --sand-light: #F7EFE6;
+    --sand-border: #DFCCB7;
+    --dark: #1A1D1F;
+    --dark-surface: #262A2E;
+    --dark-text: #FAF4EC;
+    --success: #2F8F5B;
+    --danger: #C93C3C;
+  }
+
+  * {
+    box-sizing: border-box;
+    border-color: var(--sand-border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-poppins), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-montreal), var(--font-poppins), system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Subtle architectural brick pattern SVG background */
+.bg-brick-pattern {
+  background-color: var(--cream);
+  background-image: radial-gradient(rgba(168, 67, 42, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(168, 67, 42, 0.08) 1px, var(--cream) 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.bg-brick-grid-subtle {
+  background-image: linear-gradient(to right, rgba(233, 216, 196, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(233, 216, 196, 0.4) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Leaflet Custom Marker Pins */
+.custom-price-pin {
+  background-color: #1F2326;
+  color: #FFFFFF;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 11px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  border: 1px solid #A8432A;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.custom-price-pin:hover,
+.custom-price-pin.active {
+  background-color: #A8432A;
+  color: #FFFFFF;
+  transform: scale(1.08) translateY(-2px);
+  border-color: #FFFFFF;
+  z-index: 1000 !important;
+}
+
+.custom-price-pin::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #1F2326;
+}
+
+.custom-price-pin:hover::after,
+.custom-price-pin.active::after {
+  border-top-color: #A8432A;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF4EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #DFCCB7;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8432A;
+}
+
+/* Accessibility / Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

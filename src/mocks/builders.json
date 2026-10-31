@@ -1,0 +1,99 @@
+[
+  {
+    "id": "b-1",
+    "name": "DLF Limited",
+    "logo": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=160&q=80",
+    "experienceYears": 77,
+    "activeProjects": 24,
+    "completedProjects": 160,
+    "rating": 4.8,
+    "cities": ["Gurugram", "Delhi", "Chandigarh"],
+    "featuredTag": "Pioneer of Urban India",
+    "slug": "dlf-limited"
+  },
+  {
+    "id": "b-2",
+    "name": "Godrej Properties",
+    "logo": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=160&q=80",
+    "experienceYears": 34,
+    "activeProjects": 42,
+    "completedProjects": 115,
+    "rating": 4.7,
+    "cities": ["Mumbai", "Bengaluru", "Pune", "NCR"],
+    "featuredTag": "125-Year Trust Legacy",
+    "slug": "godrej-properties"
+  },
+  {
+    "id": "b-3",
+    "name": "Prestige Group",
+    "logo": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=160&q=80",
+    "experienceYears": 38,
+    "activeProjects": 56,
+    "completedProjects": 280,
+    "rating": 4.8,
+    "cities": ["Bengaluru", "Mumbai", "Hyderabad", "Goa"],
+    "featuredTag": "Iconic South India Skylines",
+    "slug": "prestige-group"
+  },
+  {
+    "id": "b-4",
+    "name": "Sobha Limited",
+    "logo": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=160&q=80",
+    "experienceYears": 29,
+    "activeProjects": 28,
+    "completedProjects": 140,
+    "rating": 4.9,
+    "cities": ["Bengaluru", "Gurugram", "Pune", "Chennai"],
+    "featuredTag": "German Engineering Precision",
+    "slug": "sobha-limited"
+  },
+  {
+    "id": "b-5",
+    "name": "Lodha (Macrotech)",
+    "logo": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=160&q=80",
+    "experienceYears": 44,
+    "activeProjects": 39,
+    "completedProjects": 210,
+    "rating": 4.6,
+    "cities": ["Mumbai", "Pune", "Bengaluru", "London"],
+    "featuredTag": "India's No. 1 Developer by Sales",
+    "slug": "lodha-group"
+  },
+  {
+    "id": "b-6",
+    "name": "Oberoi Realty",
+    "logo": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=160&q=80",
+    "experienceYears": 41,
+    "activeProjects": 18,
+    "completedProjects": 95,
+    "rating": 4.9,
+    "cities": ["Mumbai", "Thane", "Gurugram"],
+    "featuredTag": "Bespoke Architectural Luxury",
+    "slug": "oberoi-realty"
+  },
+  {
+    "id": "b-7",
+    "name": "Brigade Group",
+    "logo": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=160&q=80",
+    "experienceYears": 37,
+    "activeProjects": 31,
+    "completedProjects": 260,
+    "rating": 4.7,
+    "cities": ["Bengaluru", "Chennai", "Hyderabad", "Mysuru"],
+    "featuredTag": "Building Better Communities",
+    "slug": "brigade-group"
+  },
+  {
+    "id": "b-8",
+    "name": "Tata Housing",
+    "logo": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=160&q=80",
+    "experienceYears": 40,
+    "activeProjects": 22,
+    "completedProjects": 105,
+    "rating": 4.8,
+    "cities": ["Mumbai", "NCR", "Bengaluru", "Pune", "Kolkata"],
+    "featuredTag": "The Gold Standard of Integrity",
+    "slug": "tata-housing"
+  }
+]
+
