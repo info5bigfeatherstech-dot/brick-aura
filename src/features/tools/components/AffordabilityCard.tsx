@@ -6,7 +6,6 @@ import { calculateAffordability } from '../lib/emi';
 import { formatPrice } from '@/lib/format';
 import { Compass, CheckCircle2, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
 export function AffordabilityCard() {
   const [monthlyIncome, setMonthlyIncome] = useState(150000); // 1.5 Lakhs

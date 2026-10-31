@@ -4,9 +4,7 @@ import React, { useState } from 'react';
 import { Slider } from '@/components/ui/slider';
 import { calculateEmiBreakdown } from '../lib/emi';
 import { formatPrice } from '@/lib/format';
-import { Calculator, ArrowRight, ShieldCheck } from 'lucide-react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { Calculator, ShieldCheck } from 'lucide-react';
 
 export function EmiCalculator() {
   const [loanAmount, setLoanAmount] = useState(6000000); // 60 Lakhs
