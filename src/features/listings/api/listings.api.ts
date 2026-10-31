@@ -75,6 +75,19 @@ export async function fetchListingById(id: string): Promise<Listing | null> {
   return data;
 }
 
+export async function fetchListingBySlug(slug: string): Promise<Listing | null> {
+  if (isMockMode()) {
+    await delay(120);
+    const item = (mockListingsData as Listing[]).find(
+      (l) => l.slug === slug || l.id === slug
+    );
+    return item || (mockListingsData as Listing[])[0] || null;
+  }
+
+  const { data } = await apiClient.get<Listing>(`/listings/slug/${slug}`);
+  return data;
+}
+
 export async function fetchProjects(): Promise<Project[]> {
   if (isMockMode()) {
     await delay(180);
@@ -95,3 +108,15 @@ export async function fetchFeaturedProject(): Promise<Project> {
   return data;
 }
 
+export async function fetchProjectBySlug(slug: string): Promise<Project | null> {
+  if (isMockMode()) {
+    await delay(120);
+    const item = (mockProjectsData as Project[]).find(
+      (p) => p.slug === slug || p.id === slug
+    );
+    return item || (mockProjectsData as Project[])[0] || null;
+  }
+
+  const { data } = await apiClient.get<Project>(`/projects/slug/${slug}`);
+  return data;
+}

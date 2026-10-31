@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Heart, MapPin, ShieldCheck, ArrowUpRight } from 'lucide-react';
 import { Listing, Project } from '../types';
 import { useWishlistStore, useRecentlyViewedStore } from '@/features/wishlist/store';
@@ -25,6 +26,7 @@ export function ListingCard({
   className,
   onSelect,
 }: ListingCardProps) {
+  const router = useRouter();
   const isProject = variant === 'project' || ('isReraVerified' in item && 'configurations' in item);
   const { isWishlisted, toggleWishlist } = useWishlistStore();
   const { recordView } = useRecentlyViewedStore();
@@ -36,11 +38,22 @@ export function ListingCard({
 
   const wishlisted = mounted ? isWishlisted(item.id) : false;
 
-  const handleCardClick = () => {
+  const targetUrl = isProject
+    ? `/projects/${item.slug}`
+    : `/property/${item.slug}`;
+
+  const handleCardClick = (e: React.MouseEvent) => {
+    // If the click came from an internal link or button, let that handle it
+    const target = e.target as HTMLElement;
+    if (target.closest('button') || target.closest('a')) {
+      return;
+    }
+
     if (!isProject) {
       recordView(item as Listing);
     }
     if (onSelect) onSelect();
+    router.push(targetUrl);
   };
 
   const handleWishlistToggle = (e: React.MouseEvent) => {
@@ -58,7 +71,7 @@ export function ListingCard({
       <div
         onClick={handleCardClick}
         className={cn(
-          'group relative bg-white rounded-sm border border-sand hover:border-brick overflow-hidden transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between shadow-xs',
+          'group relative bg-white rounded-sm border border-sand hover:border-brick overflow-hidden transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between shadow-xs cursor-pointer',
           className
         )}
       >
@@ -149,7 +162,7 @@ export function ListingCard({
     <div
       onClick={handleCardClick}
       className={cn(
-        'group relative bg-white rounded-sm border border-sand hover:border-brick overflow-hidden transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between shadow-xs',
+        'group relative bg-white rounded-sm border border-sand hover:border-brick overflow-hidden transition-all duration-200 hover:-translate-y-1 flex flex-col justify-between shadow-xs cursor-pointer',
         className
       )}
     >
@@ -179,9 +192,10 @@ export function ListingCard({
 
         {/* Wishlist Heart Button */}
         <button
+          type="button"
           onClick={handleWishlistToggle}
           className={cn(
-            'absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-150 shadow-sm focus:outline-none',
+            'absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-150 shadow-sm focus:outline-none z-10',
             wishlisted
               ? 'bg-brick text-white'
               : 'bg-white/90 text-ink/80 hover:bg-white hover:text-brick hover:scale-110'
@@ -251,4 +265,3 @@ export function ListingCard({
     </div>
   );
 }
-
